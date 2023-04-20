@@ -1,0 +1,9 @@
+#!/bin/bash
+
+cd files
+for file in *.txt
+do
+	first_letter=${file:0:1}
+	first_low="${first_letter,,}"
+	mv ${file} ../${first_low}
+done
